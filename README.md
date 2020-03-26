@@ -8,7 +8,7 @@ Terraform creates an EC2 instance for the purpose of demonstrating how the lambd
 
 A few additional notes:
 - Terraform will zip up the python source before deploying the Lambda function
-- Terraform will create a test JSON payload(called `test_event.json`) from a template to allow testing the lambda without actually terminating the instance. See testing below info below.
+- Terraform will create a test JSON payload(called `test_event.json`) from a template to allow testing the lambda without actually terminating the instance. See testing info below.
 
 
 ## Prereqs & Dependencies
