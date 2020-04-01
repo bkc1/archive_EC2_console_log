@@ -40,7 +40,9 @@ $ terraform destroy
 ```
 ### Terminate EC2 instance to trigger Lambda
 
-After the stack is successfully deployed via terraform, note the terraform outputs which are needed for the AWScli commands below:
+After the stack is successfully deployed via terraform, note the terraform outputs which are needed for the AWScli commands below.
+
+Note: EC2 Console logs take about 5 min to be available through the `get-console-output` API. The Lambda will fail if the an EC2 instance is terminated before the console logs are populated. TODO: Add better Lambda condition handling/logging for this scenario.
 ```
 $ aws ec2 terminate-instances --instance-ids <instanceid> --region <region>
 ```
